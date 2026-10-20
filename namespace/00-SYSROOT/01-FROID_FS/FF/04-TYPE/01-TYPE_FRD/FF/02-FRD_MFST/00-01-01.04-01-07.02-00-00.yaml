@@ -1,0 +1,15 @@
+mf_nodid: 00-01-00.04-01-00.02-00-00
+
+schema:
+  mf_nodid: "{NODE_ID}"      # one (the first entry; identity)
+  mf_nodtg: "{NOD_TAG}"      # one
+  mf_locus: "[FLIO_LCS]"     # one
+  mf_atch: "[FLIO_TCH]"      # one
+  mf_owner: "{NODE_ID}"      # one (an [OWN_OWNR])
+  mf_depst: "{NODE_ID}"      # one (a [TIM_TIME])
+  mf_sprup: "{NODE_ID}*"     # one or more, or [GSYSHASH]
+  mf_hshid: "{SHA256}"       # one (genesis hash over mf_nodid..mf_sprup); [NULL] until deposition
+  mf_arfct: "{FLIO_ART}+"    # one or more (filename, SHA256) pairs
+  mf_hshar: "{SHA256}"       # one; [NULL] until deposition
+  mf_sprdn: "{NODE_ID}*"     # zero or more
+  mf_hshsp: "{SHA256}"       # one, written at supersession
